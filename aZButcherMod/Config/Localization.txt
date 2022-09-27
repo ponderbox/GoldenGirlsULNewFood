@@ -1,0 +1,295 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+
+foodCropWheat,items,Food,New,Raw Wheat,,,,,
+foodCropWheatDesc,items,Food,New,"Raw wheat grain serves as an important staple food. It can be crafted into flour, another important crafting ingredient.",,,,,
+
+foodCropTomato,items,Food,New,Tomato,,,,,
+foodCropTomatoDesc,items,Food,New,"The edible berry of the plant Solanum lycopersicum, commonly known as a tomato.",,,,,
+
+foodCropOnion,items,Food,New,Onion,,,,,
+foodCropOnionDesc,items,Food,New,"A vegetable that is a widely cultivated species of the genus Allium.",,,,,
+
+foodCropCabbage,items,Food,New,Cabbage,,,,,
+foodCropCabbageDesc,items,Food,New," several cultivars of Brassica oleracea, is a leafy green biennial plant.",,,,,
+
+foodCropApple,items,Food,New,An Apple,,,,,
+foodCropAppleDesc,items,Food,New,"Apples are fruits harvested from trees and used in creation of various dishes and cider.",,,,,
+
+foodFlour,items,Food,New,Bag of Flour,,,,,
+foodFlourDesc,items,Food,New,"Flour is an essential cooking ingredient made from wheat.",,,,,
+
+foodButter,items,Food,New,Stick of Butter,,,,,
+foodButterDesc,items,Food,New,"Fatty dairy product made from whole milk.",,,,,
+
+drinkJarMilk,items,Food,New,Bottle of Milk,,,,,
+drinkJarMilkDesc,items,Food,New,"Milk is a rare commodity in the wasteland. This bottle of whole milk can be used to make butter,which is another important ingredient. ",,,,,
+
+foodBagRice,items,Food,New,Bag of Rice,,,,,
+foodBagRiceDesc,items,Food,New,"Excellent foodstuff for raw calories.",,,,,
+foodCanTomato,items,Food,New,Italian Canned Tomatoes,,,,,
+foodCanTomatoDesc,items,Food,New,"A can of whole tomatoes that can serve as the bedrock of many sauces",,,,,
+foodCanSalsa,items,Food,New,Spicy Jalapeno Salsa,,,,,
+foodCanSalsaDesc,items,Food,New,"Spicy and tangy dressing for nearly any food.",,,,,
+
+foodGravy,items,Food,New,Rich Gravy,,,,,
+foodGravyDesc,items,Food,New,"Meat gravy made from meat. A great topping for many dishes.",,,,,
+
+foodRichBroth,items,Food,New,Rich Broth,,,,,
+foodRichBrothDesc,items,Food,New,"An intense bone broth full of vitamins and nutrients.",,,,,
+
+foodCheese,items,Food,New,Cheese,,,,,
+foodCheeseDesc,items,Food,New,"A homemade dairy product useful in several recipes.",,,,,
+
+foodPorridge,items,Food,New,Porridge,,,,,
+foodPorridgeDesc,items,Food,New,"A carbohydrate rich porridge made from wheat.",,,,,
+foodPorridgeSchematic,items,Food,New,"Porridge Recipe",,,,,
+foodPorridgeSchematicDesc,items,Food,New,"Boil some cracked wheat in water to create porridge suitable for carboloading athletes.",,,,,
+
+foodMashedPotato,items,Food,New,Plate of Mashed Potatoes,,,,,
+foodMashedPotatoDesc,items,Food,New,"Creamy,buttery mashed potatoes full of fat and carbs, but mostly fat.",,,,,
+foodMashedPotatoSchematic,items,Food,New,"Mashed Potatoes Recipe",,,,,
+foodMashedPotatoSchematicDesc,items,Food,New,"Cut potatoes into cold water. Raise to a boil and cook until soft.\nMash and mix with butter until creamy. \nA basic but useful recipe",,,,,
+
+foodAppleJam,items,Food,New,Jar of Apple Jam,,,,,
+foodAppleJamDesc,items,Food,New,"Sugary fruit preserves excellent for hungry survivors.",,,,,
+foodJamSchematic,items,Food,New,"Jam Instructions",,,,,
+foodJamSchematicDesc,items,Food,New,"Cook fruit in a jar and mash.\nJams when properly sealed have a long shelf life.",,,,,
+
+foodBlueberryJam,items,Food,New,Jar of Blueberry Jam,,,,,
+foodBlueberryJamDesc,items,Food,New,"Sugary fruit preserves excellent for hungry survivors.",,,,,
+
+foodBiscuit,items,Food,New,Buttermilk Biscuit,,,,,
+foodBiscuitDesc,items,Food,New,"Homemade biscuits that bring back memories of the pre-apocalypse.",,,,,
+foodBreadsSchematic,items,Food,New,"Intro to Breads",,,,,
+foodBreadsSchematicDesc,items,Food,New,"Learn the basics of baking.\nAll you need is flour and water.",,,,,
+
+foodBread,items,Food,New,Loaf of Bread,,,,,
+foodBreadDesc,items,Food,New,"Favorite hobby of pandemic first-time cooks with too much time.",,,,,
+
+foodHoneyham,items,Food,New,Honey Ham,,,,,
+foodHoneyhamDesc,items,Food,New,"Well smoked and cured ham with a tinge of honey sweetness.",,,,,
+foodHoneyhamSchematic,items,Food,New,"Ham Curing Guide",,,,,
+foodHoneyhamSchematicDesc,items,Food,New,"Cut,smoke,baste, and cook. \nDelicious ham in four easy steps.",,,,,
+
+foodFruitPlatter,items,Food,New,Bowl of Fruit,,,,,
+foodFruitPlatterDesc,items,Food,New,"A light but very healthly assortment of fruits for all of your diet needs.",,,,,
+foodFruitPlatterSchematic,items,Food,New,"Fruit Presentation Guide",,,,,
+foodFruitPlatterSchematicDesc,items,Food,New,"A guide on performing a basic human task. \nCut the fruit and put it on the plate...",,,,,
+
+foodApplepie,items,Food,New,Apple Pie,,,,,
+foodApplepieDesc,items,Food,New,"A pie-full of malus domestica...",,,,,
+foodApplepieSchematic,items,Food,New,"Granny Smith's ol' Apple Pie Recipe",,,,,
+foodApplepieSchematicDesc,items,Food,New,"Pie so good you'd think its made with Zap Apple Jam.",,,,,
+
+foodHamburger,items,Food,New,Buger and Fries,,,,,
+foodHamburgerDesc,items,Food,New,"Plate of murica' coming right for your arteries. \nPraise the griddle gods...",,,,,
+foodHamburgerSchematic,items,Food,New,"Way of the Grill",,,,,
+foodHamburgerSchematicDesc,items,Food,New,"How to not embarrass yourself in front of friends and family at a cookout.",,,,,
+
+foodTonjiru,items,Food,New,Miso Tonjiru,,,,,
+foodTonjiruDesc,items,Food,New,"A miso based dish of meat and veggies combined into a stew. Helps stimulate your inner nerd.",,,,,
+foodTonjiruSchematic,items,Food,New,"Improvisational Japanese Cooking",,,,,
+foodTonjiruSchematicDesc,items,Food,New,"How to make traditional foodies reeeeeee in a few short steps...",,,,,
+
+foodBOC,items,Food,New,Breakfast of Champions,,,,,
+foodBOCDesc,items,Food,New,"A full morning meal with all the fixins' to help you tackle a long work day.",,,,,
+foodBOCSchematic,items,Food,New,"Grill and Grease Effciency",,,,,
+foodBOCSchematicDesc,items,Food,New,"How to start the day with hyperlipidemia...",,,,,
+
+foodFullEnglish,items,Food,New,Full English Breakfast,,,,,
+foodFullEnglishDesc,items,Food,New,"Channel the metabolism of the beast with this multifaceted monstrosity which pushes your body to the limit.",,,,,
+foodFullEnglishSchematic,items,Food,New,"The Full Monty",,,,,
+foodFullEnglishSchematicDesc,items,Food,New,"Wot's all this then a good ol' mash of bits n bobs for grub thats easy peasy.",,,,,
+
+foodKFC,items,Food,New,Fried Chicken Meal,,,,,
+foodKFCDesc,items,Food,New,"Need even more calories? \nNo sense of healthy living? \nThen we got a meal for you.",,,,,
+foodKFCSchematic,items,Food,New,"How not to start a grease fire.",,,,,
+foodKFCSchematicDesc,items,Food,New,"Fried chicken and sides in a small large amount of steps.",,,,,
+
+foodReserveChicken,items,Food,New,Homemade Chicken Ration,,,,,
+foodReserveChickenDesc,items,Food,New,"Half decent flavor for deployment. Keeps you nice and healthy.",,,,,
+foodReserveChickenSchematic,items,Food,New,"Versatile Chicken",,,,,
+foodReserveChickenSchematicDesc,items,Food,New,"Learn how to elevate canned chicken rations into a great meal.",,,,,
+
+drinkAppleJuice,items,Food,New,Fresh Apple Juice,,,,,
+drinkAppleJuiceDesc,items,Food,New,"A refreshing drink that takes you back to your childhood.",,,,,
+drinkAppleSchematic,items,Food,New,Apple Press Basics,,,,,
+drinkAppleSchematicDesc,items,Food,New,"Learn how to craft apple juice and cider.",,,,,
+
+drinkAppleCider,items,Food,New,Fresh Apple Cider,,,,,
+drinkAppleCiderDesc,items,Food,New,"The Apple family's legendary fresh-pressed apple elixir that restores health and hydration",,,,,
+
+seedApple,blocks,Block,New,Apple Seed,,,,,
+seedWheat,blocks,Farming,New,Wheat Seed,,,,,
+seedTomato,blocks,Farming,New,Tomato Seed,,,,,
+seedOnion,blocks,Farming,New,Onion Seed,,,,,
+seedCabbage,blocks,Farming,New,Cabbage Seed,,,,,
+
+plantedWheat3HarvestDesc,blocks,Farming,New,Wheat Plant,,,,,
+WheatPlantPlayer,blocks,Farming,New,Wheat Plant,,,,,
+Wheatgrowing,blocks,Farming,New,Young Wheat,,,,,
+
+plantedTomato3HarvestDesc,blocks,Farming,New,Tomato Plant,,,,,
+TomatoPlantPlayer,blocks,Farming,New,Tomato Plant,,,,,
+Tomatogrowing,blocks,Farming,New,Young Tomatoes,,,,,
+
+plantedOnion3HarvestDesc,blocks,Farming,New,Onion Plant,,,,,
+OnionPlantPlayer,blocks,Farming,New,Onion Plant,,,,,
+Oniongrowing,blocks,Farming,New,Young Onions,,,,,
+
+plantedCabbage3HarvestDesc,blocks,Farming,New,Cabbage Plant,,,,,
+CabbagePlantPlayer,blocks,Farming,New,Cabbage Plant,,,,,
+Cabbagegrowing,blocks,Farming,New,Young Cabbage,,,,,
+
+
+appleYoung,blocks,Farming,New,Empty Apple Tree,,,,,
+appleYoungDesc,blocks,Farming,New,Empty Apple Tree,,,,,
+appleGrown,blocks,Farming,New,Apple Tree,,,,,
+appleGrownDesc,blocks,Farming,New,Apple Tree,,,,,
+
+
+
+foodRice,items,Food,New,Bowl of Rice,,,,,
+foodRiceDesc,items,Food,New,"Staple side-dish of most asian cooking",,,,,
+foodRiceSchematic,items,Food,New,"Long-grain Basics",,,,,
+foodRiceSchematicDesc,items,Food,New,"How to put rice and water into a bowl and heat it; even a college student can do it.",,,,,
+
+foodPizza,items,Food,New,Fresh Pizza,,,,,
+foodPizzaDesc,items,Food,New,"A classic american staple much desired in the apocalypse.",,,,,
+foodPizzaSchematic,items,Food,New,"Fast Food Fanatic: Peetzer Edition",,,,,
+foodPizzaSchematicDesc,items,Food,New,"Fat, calories, carbohydrates? Yes! How to make your dreams come true.",,,,,
+
+foodBurrito,items,Food,New,Beef Burrito,,,,,
+foodBurritoDesc,items,Food,New,"Carbs and protein in an elegantly portable format.",,,,,
+foodBurritoSchematic,items,Food,New,"Tortilla Tucking Tips",,,,,
+foodBurritoSchematicDesc,items,Food,New,"How to make a decent burrito without too much effort.",,,,,
+
+foodFriedRice,items,Food,New,Asian Fried Rice,,,,,
+foodFriedRiceDesc,items,Food,New,"A ubiquitous asian side dish which complements many meals.",,,,,
+foodFriedRiceSchematic,items,Food,New,"Wok-y Tonk: Rice dishes",,,,,
+foodFriedRiceSchematicDesc,items,Food,New,"How to be a lazy cook and still impress people",,,,,
+
+foodJambalaya,items,Food,New,Creole Jambalaya,,,,,
+foodJambalayaDesc,items,Food,New,"Help put some tough meat on your bones with a meal that gots all the food things you could want.",,,,,
+foodJambalayaSchematic,items,Food,New,"Lousiana Rice",,,,,
+foodJambalayaSchematicDesc,items,Food,New,"Good ol' recipes from the creole masters.",,,,,
+
+foodHuevos,items,Food,New,Huevos Rancheros,,,,,
+foodHuevosDesc,items,Food,New,"Start the day on a good note with a southwestern classic.",,,,,
+foodHuevosSchematic,items,Food,New,"Eggs and Salsa",,,,,
+foodHuevosSchematicDesc,items,Food,New,"Learn the ranchhand's starter fuel to make a long morning go quick.",,,,,
+
+foodArrozConPollo,items,Food,New,Arroz con Pollo,,,,,
+foodArrozConPolloDesc,items,Food,New,"A simple Spanish rice and chicken entrèe",,,,,
+foodarrozSchematic,items,Food,New,"Superb Spanish Style",,,,,
+foodarrozSchematicDesc,items,Food,New,"Effective uses for that chicken sitting in your fridge.",,,,,
+
+foodFrenchToast,items,Food,New,French Toast,,,,,
+foodFrenchToastDesc,items,Food,New,"A classic breakfast meal served with healthy blueberries.",,,,,
+foodEggSandwich,items,Food,New,Breakfast Egg Sandwich,,,,,
+foodEggSandwichDesc,items,Food,New,"Ham, Egg, and Cheese layered together inside of a fresh baked biscuit.",,,,,
+foodOmelette,items,Food,New,Breakfast Omelette,,,,,
+foodOmeletteDesc,items,Food,New,"An American style omelette stuffed with meat and mushrooms to help start the day.",,,,,
+eggrecipeSchematic,items,Food,New,"Breakfast Egg Classics",,,,,
+eggrecipeDesc,items,Food,New,"Learn how to make three different breakfast dishes using eggs.",,,,,
+
+drinkYuccaJuiceSmoothieDesc,items,Food,,"This smoothie helps you survive in severely hot environments.",,,,,
+
+drinkTequila,items,Food,New,Asesino de Nieve Tequila,,,,,
+drinkTequilaDesc,items,Food,New,"A strong alcoholic liquor which aids in cold weather survival.",,,,,
+drinkTequilaSchematic,items,Food,New,Tequila Recipe,,,,,
+drinkTequilaSchematicDesc,items,Food,New,"Read this fabled recipe to learn the secrets of Liquor.",,,,,
+
+drinkMilkshake,items,Food,New,Chocolate Milkshake,,,,,
+drinkMilkshakeDesc,items,Food,New,"A cold milkshake made from milk and chocolate candy. Helps with mining.",,,,,
+drinkMilkshakeSchematic,items,Food,New,Milkshake Recipe,,,,,
+drinkMilkshakeSchematicDesc,items,Food,New,"Learn how to take three simple ingredients and make a drink infamous for its massive margins.",,,,,
+
+foodBiscuitsandgravy,items,Food,New,Biscuits and Gravy,,,,,
+foodBiscuitsandgravyDesc,items,Food,New,"A straight forward breakfast great for curing a hangover",,,,,
+foodBiscuitsandgravySchematic,items,Food,New,"Fat drenched Carbs",,,,,
+foodBiscuitsandgravySchematicDesc,items,Food,New,"You want an arterial blockage in as few meals as possible, then we have got a recipe for you.",,,,,
+
+resourceCookBookPage,items,Food,New,Cookbook Page,,,,,
+resourceCookBookPageDesc,items,Food,New,"Use these half completed recipes to unlock recipes at the campfire and oven. Carefully pick which recipe you want to learn and craft it.",,,,,
+
+toolBarTools,items,Item,New,Bar Tools,,,,,
+toolBarToolsDesc,items,Item,New,"A set of bartending tools required for crafting complex beverages.",,,,,
+toolKitchenTools,items,Item,New,Precision Cooking Tools,,,,,
+toolKitchenToolsDesc,items,Item,New,"A collection of high quality knives, measuring tools, and cooking utensils which are required for crafting many types of food."
+toolCookSet,items,Item,New,High Quality Cookware,,,,,
+toolCookSetDesc,items,Item,New,"A set of fine cooking pots and pans which speed up crafting of food."
+workingOven,blocks,Block,New,A Working Oven,,,,,
+StoveDesc,blocks,Block,New,A functional wood powered oven capable of cooking a variety of filling dishes. ,,,,,
+
+toolBarToolsSchematic,items,Item,New,Bar Tools Schematic,,,,,
+toolCookSetSchematic,items,Item,New,Cook Set Schematic,,,,,
+toolKitchenToolsSchematic,items,Item,New,Kitchen Utensils Schematic,,,,,
+OvenSchematic,items,Item,New,Oven Schematic,,,,,
+
+foodPemmican,items,Food,New,Pemmican,,,,,
+foodPemmicanDesc,items,Food,New,"A dried survival food created from meat and Fiber. Pragmatic for cold weather survival",,,,,
+foodPemmicanSchematic,items,Food,New,Pemmican Guide,,,,,
+
+newperkMasterChefRank1LongDesc,progression,perk Str,new,"Cooking is not your thing but you know some basics. Unlocks basic recipes such as boiled and grilled meats, baked potatoes, teas and coffee. ",,,,,
+newperkMasterChefRank2LongDesc,progression,perk Str,new,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, vegetable stew and liquor crafting.",,,,,
+newperkMasterChefRank3LongDesc,progression,perk Str,new,"Learn how to make build and use ovens and kitchen gadgets. Craft bread, biscuits, mashed potatoes, ovens and more. ",,,,,
+newperkMasterChefRank4LongDesc,progression,perk Str,new,"Cook for an army by making Fruit platters, Fish Tacos, and Hobo Stew. Learn how to fabricate advanced cookware. Use 20% less of a recipe's main ingredients.",,,,,
+newperkMasterChefRank5LongDesc,progression,perk Str,new,"Grandpa's ass kicking recipes.\nLearn grandpa's secret recipes that boost stats and attributes! \nCraft Bar Tools and other alcoholic beverages.",,,,,
+
+drinkBlueberryWine,items,Food,New,Fine Blueberry Wine,,,,,
+drinkBlueberryWineDesc,items,Food,New,"An elegantly composed and aged wine created from the finest cultivars of Arizona blueberries brought to you by fine artisans. Quality product worth a lot to those with fine taste.",,,,,
+drinkBlueberryWineSchematic,items,Food,New,"Wanna see a money trick?",,,,,
+drinkBlueberryWineSchematicDesc,items,Food,New,"How to inflate your ego and billfold with pricey juice.",,,,,
+
+Tpaper,items,Item,new,Toilet Paper
+buttwipeDesc,items,Item,new,The new gold of the Arizona apocalypse...apparently.\n\nScrap to paper.
+goldBar,items,Item,new,Gold Bar
+goldBarDesc,items,Item,new,A highly valuable bar of gold. Can converted to dukes.
+
+foodColeslaw,items,Food,New,Coleslaw,,,,,
+foodColeslawDesc,items,Food,New,"Mildly fermented cabbage preparation full of vitamins and minerals.",,,,,
+foodColeslawSchematic,items,Food,New,"Coldboy Sidedish",,,,,
+
+foodCapreseSalad,items,Food,New,Caprese Salad,,,,,
+foodCapreseSaladDesc,items,Food,New,"A classic italian salad composed of fresh mozzarella and tomatoes.",,,,,
+foodGrilledSalad,items,Food,New,Grilled Chicken Salad,,,,,
+foodGrilledSaladDesc,items,Food,New,"Get your fiber and nutrients from veggies and the taste of slightly burnt animal flesh.",,,,,
+foodsaladSchematic,items,Food,New,"Why don'tcha eat a salad fatso",,,,,
+saladDesc,items,Food,New,"How to eat a diet food without losing your will to live.",,,,,
+
+
+
+foodKimchi,items,Food,New,Cabbage Kimchi,,,,,
+foodKimchiDesc,items,Food,New,"Actual properly made fresh kimchi. Spicy, salty, acrid, with a slight tingle that lingers in the mouth.",,,,,
+foodKimchiSchematic,items,Food,New,"Traditional Cabbage Preserves",,,,,
+foodKimchiSchematicDesc,items,Food,New,"This crap can cure cancer I tell you.",,,,,
+
+foodBLT,items,Food,New,BLT sandwich,,,,,
+foodBLTDesc,items,Food,New,"Simple and filling. Use that dusty sandwich-press you got for christmas five years ago.",,,,,
+foodbltSchematic,items,Food,New,"How to assemble a sandwich you ignorant cement-head",,,,,
+foodbltSchematicDesc,items,Food,New,"How in the goddamn you survived this long is an affront to natural selection.",,,,,
+
+seedAppleSchematic,items,Food,New,"Apple (seed) Recipe",,,,,
+seedWheatSchematic,items,Food,New,"Wheat (seed) Recipe",,,,,
+seedTomatoSchematic,items,Food,New,"Tomato (seed) Recipe",,,,,
+seedOnionSchematic,items,Food,New,"Onion (seed) Recipe",,,,,
+seedCabbageSchematic,items,Food,New,"Cabbage (seed) Recipe",,,,,
+
+drinkJarGrainAlcohol,items,Food,New,Grain Alcohol,,,,,
+drinkJarGrainAlcoholDesc,items,Food,New,Grain alcohol can be made in a beaker at a campfire. Useful for advanced beverages.,,,,,
+
+drinkWhisky,items,Food,New,Ricky Joel's Bourbon,,,,,
+drinkWhiskyDesc,items,Food,New,Barrel aged Texas whiskey which makes you shoot harder. Please drink responsibly,,,,,
+drinkWhiskySchematic,items,Food,New,Ricky Joel's Bourbon Recipe,,,,,
+drinkWhiskySchematicDesc,items,Food,New,Learn how to craft barrel aged Texas whiskey which makes you shoot harder. Please drink responsibly,,,,,
+
+wineBarrelworkbench,blocks,Block,New,Liquor Barrel,,,,,
+wineBarrelworkbenchDesc,blocks,Block,New,A wood barrel designed for producton of alcoholic beverages,,,,,
+BarrelSchematic,items,Food,New,Cask Proofing Fundamentals,,,,,
+BarrelSchematicDesc,items,Food,New,Learn the secrets of bathtub gin and other liquor manufacturing.,,,,,
+
+drinkVodka,items,Food,New,Stratim Potato Vodka,,,,,
+drinkVodkaDesc,items,Food,New,Is boris with secret russian tip on how to shoot gun... YES! Drink the fun time water and bang is moving rapid... YES! Please drink responsibly.,,,,,
+drinkVodkaSchematic,items,Food,New,Cooking vith Boris,,,,,
+drinkVodkaSchematicDesc,items,Food,New,Is boris with secret russian tip on how to shoot gun... YES! Drink the fun time water and bang is moving rapid... YES! Please drink responsibly.,,,,,

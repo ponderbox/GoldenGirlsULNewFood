@@ -1,0 +1,263 @@
+<configs>
+
+ 
+                                    <!--Animals-->
+
+
+<!-- Small Game -->
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceFeather']"/>	
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalChicken')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="10"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="Raw Chicken Legs" tag="butcherHarvest" count="2"/>
+		<drop event="Harvest" name="Raw Chicken Breast" tag="butcherHarvest" count="2"/>
+		<drop event="Harvest" name="Raw Chicken Wings" tag="butcherHarvest" count="2"/>
+		<drop event="Harvest" name="Raw Chicken Egg" tag="butcherHarvest" count="1,2" prob="0.25"/>  		
+	</append> 	
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='resourceBone']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalRabbit')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="10"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="Raw Whole Rabbit" tag="butcherHarvest" count="1"/> 	
+		<drop event="Harvest" name="Raw Rabbit Legs" tag="butcherHarvest" count="1"/>	
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="1,2" prob="0.50"/>				
+	</append> 		
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='resourceBone']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalSnake')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="20"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="Raw Whole Snake" tag="butcherHarvest" count="1"/> 	
+		<drop event="Harvest" name="Raw Snake Egg" tag="butcherHarvest" count="1,2" prob="0.40"/>			
+	</append> 	
+
+<!-- Medium Game -->
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='resourceAnimalFat']"/>	
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalDoe')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="500"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<!-- Constant Drops -->
+		<drop event="Harvest" name="Raw Venison" tag="butcherHarvest" count="1,2"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/>  		
+		<drop event="Harvest" name="Animal Milk" tag="butcherHarvest" count="2"/> 
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Deer Manure" tag="butcherHarvest" count="10,30"/> 
+		<!-- Variable Drops -->
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="1,2" prob="0.50"/>		
+		<drop event="Harvest" name="Raw Small Meat" tag="butcherHarvest" count="1" prob="0.25"/> 
+		<drop event="Harvest" name="Raw Intestines" tag="butcherHarvest" count="5" prob="0.50"/> 		
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="1" prob="0.50"/> 		
+	</append> 			
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='resourceAnimalFat']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalStag')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="750"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<!-- Constant Drops -->
+		<drop event="Harvest" name="Raw Venison" tag="butcherHarvest" count="1,2"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/>  		
+		<drop event="Harvest" name="Antler" tag="butcherHarvest" count="1,2" prob="0.75"/> 
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Deer Manure" tag="butcherHarvest" count="10,30"/> 
+		<!-- Variable Drops -->
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="1,2" prob="0.50"/>			
+		<drop event="Harvest" name="Raw Small Meat" tag="butcherHarvest" count="1" prob="0.25"/> 		
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="1" prob="0.50"/> 	
+	</append> 	
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceAnimalFat']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalBoar')]">
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="750"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<!-- Variable Drops -->	
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="1" prob="0.05"/> 		
+		<drop event="Harvest" name="Animal Milk" tag="butcherHarvest" count="1,4" prob="0.05"/> 		
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2" prob="0.25"/> 		 
+		<drop event="Harvest" name="Raw Animal Fat" tag="butcherHarvest" count="15" prob="0.50"/>
+	<!-- Constant Drops -->
+		<drop event="Harvest" name="Raw Leg Quarters" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/> 	
+		<drop event="Harvest" name="Raw Pork Belly" tag="butcherHarvest" count="1"/> 		
+		<drop event="Harvest" name="Raw Boars Feet" tag="butcherHarvest" count="1"/> 		
+	</append> 
+
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='resourceAnimalFat']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalWolf')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="950"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>	
+		<!-- Constant Drops -->
+		<drop event="Harvest" name="Raw Leg Quarters" tag="butcherHarvest" count="1"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/>  		
+		<drop event="Harvest" name="Animal Milk" tag="butcherHarvest" count="2"/> 
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Raw Animal Fat" tag="butcherHarvest" count="10,30"/> 
+		<!-- Variable Drops -->
+		<drop event="Harvest" name="Animal Claw" tag="butcherHarvest" count="5,8" prob="0.15"/> 
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="1,2" prob="0.50"/>		
+		<drop event="Harvest" name="Raw Small Meat" tag="butcherHarvest" count="1" prob="0.25"/> 
+		<drop event="Harvest" name="Raw Intestines" tag="butcherHarvest" count="5" prob="0.50"/> 		
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="1" prob="0.50"/> 			
+	</append> 			
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='resourceAnimalFat']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalCoyote')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="650"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>	
+		<drop event="Harvest" name="Raw Leg Quarters" tag="butcherHarvest" count="1"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/>  		
+		<drop event="Harvest" name="Animal Milk" tag="butcherHarvest" count="2"/> 
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Raw Animal Fat" tag="butcherHarvest" count="10,30"/> 
+		<!-- Variable Drops -->
+		<drop event="Harvest" name="Animal Claw" tag="butcherHarvest" count="5,8" prob="0.15"/> 
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="1,2" prob="0.50"/>		
+		<drop event="Harvest" name="Raw Small Meat" tag="butcherHarvest" count="1" prob="0.25"/> 
+		<drop event="Harvest" name="Raw Intestines" tag="butcherHarvest" count="5" prob="0.50"/> 		
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="1" prob="0.50"/> 		
+	</append> 			
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='resourceAnimalFat']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalMountainLion')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="750"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> <!-- Animal HP scale -->
+	</effect_group>	
+		<drop event="Harvest" name="Raw Leg Quarters" tag="butcherHarvest" count="1"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/>  		
+		<drop event="Harvest" name="Animal Milk" tag="butcherHarvest" count="2"/> 
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Raw Animal Fat" tag="butcherHarvest" count="10,30"/> 
+		<!-- Variable Drops -->
+		<drop event="Harvest" name="Animal Claw" tag="butcherHarvest" count="5,8" prob="0.15"/> 
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="1,2" prob="0.50"/>		
+		<drop event="Harvest" name="Raw Small Meat" tag="butcherHarvest" count="1" prob="0.25"/> 		
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="1" prob="0.50"/> 			
+	</append> 		
+	
+<!-- Large Game -->
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='resourceAnimalFat']"/>	
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalBossGrace')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="12000"/>
+		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+	</effect_group>	
+	<!-- Variable Drops -->	
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="3" prob="0.05"/> 		
+		<drop event="Harvest" name="Animal Milk" tag="butcherHarvest" count="1,4" prob="0.05"/> 		
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="20" prob="0.25"/> 	
+		<drop event="Harvest" name="Raw Animal Fat" tag="butcherHarvest" count="15,60" prob="0.50"/>
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="5,15" prob="0.50"/>		
+	<!-- Constant Drops -->
+		<drop event="Harvest" name="Raw Leg Quarters" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/> 	
+		<drop event="Harvest" name="Raw Pork Belly" tag="butcherHarvest" count="4"/> 		
+		<drop event="Harvest" name="Raw Boars Feet" tag="butcherHarvest" count="1"/> 	
+	</append> 		
+	
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='resourceAnimalFat']"/>	
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalBear')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".25"/> <!-- Animal HP scale -->
+	</effect_group>
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<!-- Constant Drops -->
+		<drop event="Harvest" name="Raw Leg Quarters" tag="butcherHarvest" count="1"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/>  		
+		<drop event="Harvest" name="Animal Milk" tag="butcherHarvest" count="2"/> 
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Raw Animal Fat" tag="butcherHarvest" count="10,30"/> 	
+		<!-- Variable Drops -->
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="5,15" prob="0.50"/>	
+		<drop event="Harvest" name="Bear Tooth" tag="butcherHarvest" count="1,10" prob="0.25"/> 
+		<drop event="Harvest" name="Raw Small Meat" tag="butcherHarvest" count="1" prob="0.25"/>  		
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="1" prob="0.50"/> 	
+	</append> 
+<!-- Base Game Removal -->
+	<remove xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='resourceAnimalFat']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalDireWolf')]"> 
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".25"/> <!-- Animal HP scale -->
+	</effect_group>
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<!-- Constant Drops -->
+		<drop event="Harvest" name="Raw Leg Quarters" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Raw Rib Halves" tag="butcherHarvest" count="1"/>  		
+		<drop event="Harvest" name="Animal Milk" tag="butcherHarvest" count="2"/> 
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="Raw Animal Fat" tag="butcherHarvest" count="10,30"/> 
+		<!-- Variable Drops -->
+		<drop event="Harvest" name="Animal Skin" tag="butcherHarvest" count="1,2" prob="0.50"/>		
+		<drop event="Harvest" name="Animal Claw" tag="butcherHarvest" count="5,8" prob="0.15"/> 	
+		<drop event="Harvest" name="Raw Small Meat" tag="butcherHarvest" count="1" prob="0.25"/> 		
+		<drop event="Harvest" name="Raw Large Meat" tag="butcherHarvest" count="1" prob="0.50"/> 			
+	</append> 	
+	
+
+</configs>
+
+
+	

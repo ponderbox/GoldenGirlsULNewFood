@@ -1,0 +1,179 @@
+<configs>
+<set xpath="/buffs/buff[@name='buffYuccaJuiceSmoothie']//passive_effect[@name='HypothermalResist']/@name">HyperthermalResist</set>  
+
+<append xpath="/buffs">
+<buff name="buffJambalaya" name_key="foodJambalaya" description_key="foodJambalayaDesc" icon="ui_game_symbol_candy_health_bar">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffJambalayaDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffJambalayaDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffJambalayaDisplay" operation="set" value="@$buffJambalayaDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffJambalayaDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffJambalaya">
+				<requirement name="CVarCompare" cvar="$buffJambalayaDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffJambalayaDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffJambalayaDuration" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="HealthMax" operation="base_add" value="20"/>
+		</effect_group>
+</buff>
+
+<buff name="buffHuevos" name_key="foodHuevos" description_key="foodHuevosDesc" icon="ui_game_symbol_pills">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffHuevosDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffHuevosDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffHuevosDisplay" operation="set" value="@$buffHuevosDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffHuevosDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHeuvos">
+				<requirement name="CVarCompare" cvar="$buffHuevosDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffHuevosDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffHuevosDuration" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".15"/>
+		</effect_group>
+</buff>
+
+<buff name="buffTonjiru" name_key="foodTonjiru" description_key="foodTonjiruDesc" icon="ui_game_symbol_fork">
+	<stack_type value="replace"/><duration value="0"/>
+	<display_value value=".buffTonjiruDisplay"/><display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffTonjiruDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffTonjiruDisplay" operation="set" value="@$buffTonjiruDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffTonjiruDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffTonjiru">
+			<requirement name="CVarCompare" cvar="$buffTonjiruDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffTonjiruDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffTonjiruDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+		<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+		<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+	</effect_group>
+</buff>
+
+<buff name="buffTequila" name_key="drinkTequila" description_key="drinkTequilaDesc" icon="ui_game_symbol_coffee">
+	<stack_type value="replace"/><duration value="0"/>
+	<display_value value=".buffTequilaDisplay"/><display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffTequilaDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffTequilaDisplay" operation="set" value="@$buffTequilaDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffTequilaDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffTequila">
+			<requirement name="CVarCompare" cvar="$buffTequilaDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffTequilaDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffTequilaDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect name="HypothermalResist" operation="base_add" value="30"/>
+	</effect_group>
+</buff>
+
+<buff name="buffdrinkWhisky" name_key="drinkWhisky" description_key="drinkWhiskyDesc" icon="ui_game_symbol_candy_recog">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffdrinkWhiskyDisplay"/><display_value_format value="time"/>
+		<!-- Increase ranged damage 15% for 2 minutes. -->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffdrinkWhiskyDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffdrinkWhiskyDisplay" operation="set" value="@$buffdrinkWhiskyDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffdrinkWhiskyDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffdrinkWhisky">
+				<requirement name="CVarCompare" cvar="$buffdrinkWhiskyDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffdrinkWhiskyDuration" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffdrinkWhiskyDisplay" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".15" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkArchery,admin"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value=".1"/>
+		</effect_group>
+</buff>
+
+<buff name="buffdrinkBlueberryWine" name_key="drinkBlueberryWine" description_key="drinkBlueberryWineDesc" icon="ui_game_symbol_twitch_celebrate">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffdrinkBlueberryWineDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffdrinkBlueberryWine" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffdrinkBlueberryWine" operation="set" value="@$buffdrinkBlueberryWine"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffdrinkBlueberryWine" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffdrinkBlueberryWine">
+				<requirement name="CVarCompare" cvar="$buffdrinkBlueberryWine" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffdrinkBlueberryWine" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffdrinkBlueberryWine" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="CelebrationKill" operation="base_set" value="1" />
+		</effect_group>
+</buff>
+
+<buff name="buffdrinkVodka" name_key="drinkVodka" description_key="drinkVodkaDesc" icon="ui_game_symbol_candy_recog">
+	<stack_type value="replace"/><duration value="0"/>
+	<display_value value=".buffdrinkVodkaDisplay"/><display_value_format value="time"/>
+	<!-- shoot gun faster-->
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffdrinkVodkaDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffdrinkVodkaDisplay" operation="set" value="@$buffdrinkVodkaDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffdrinkVodkaDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffdrinkVodka">
+			<requirement name="CVarCompare" cvar="$buffdrinkVodkaDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffdrinkVodkaDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffdrinkVodkaDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value=".25" tags="perkMachineGunner"/>
+	</effect_group>
+</buff>
+
+</append>
+
+<!--
+<append xpath="/buffs"
+	<buff name="buffYuccaJuiceSmoothie" name_key="drinkYuccaJuiceSmoothie" description_key="drinkYuccaJuiceSmoothieDesc" icon="ui_game_symbol_coffee">
+		<stack_type value="replace"/><duration value="0"/>
+		<display_value value=".buffYuccaJuiceSmoothieDisplay"/><display_value_format value="time"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffYuccaJuiceSmoothieDisplay" operation="set" value="@$buffYuccaJuiceSmoothieDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffYuccaJuiceSmoothieDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffYuccaJuiceSmoothie">
+				<requirement name="CVarCompare" cvar="$buffYuccaJuiceSmoothieDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffYuccaJuiceSmoothieDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="30"/>
+		</effect_group>
+	</buff>
+</append> 
+-->
+</configs>

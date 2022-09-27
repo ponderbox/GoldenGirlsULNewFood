@@ -1,0 +1,1130 @@
+<configs>
+<!--old removal-->
+
+<remove xpath="recipes/recipe[@name='foodBaconAndEggs']"/>
+
+<!--New recipes-->
+<append xpath="recipes">
+
+<!--Oven-->
+<recipe name="toolCookSet" count="1" craft_area="workbench" tags="perkMasterChef,learnable">
+	<ingredient name="resourceForgedSteel" count="15"/>
+	<ingredient name="resourceForgedIron" count="35"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceBrokenGlass" count="15"/>
+</recipe>
+
+<recipe name="WorkingOven" count="1" craft_area="workbench" tags="perkMasterChef,learnable">
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="resourceMetalPipe" count="30"/>
+	<ingredient name="resourceElectricParts" count="10"/>
+	<ingredient name="toolCookingPot" count="5"/>
+	<ingredient name="toolCookingGrill" count="3"/>
+</recipe>
+
+<recipe name="wineBarrelworkbench" count="1" craft_area="workbench" tags="perkMasterChef,learnable">
+	<ingredient name="resourceForgedIron" count="30"/>
+	<ingredient name="ulmResourcePlank" count="150"/>
+	<ingredient name="resourceGlue" count="10"/>
+</recipe>
+
+<recipe name="CookingTableworkbench" count="1" craft_area="workbench" tags="perkMasterChef,learnable">
+    <ingredient name="resourceForgedIron" count="10"/>
+	<ingredient name="resourceSpring" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="25"/>
+	<ingredient name="ulmResourcePlank" count="40"/>
+</recipe>
+
+<!--Seeds-->
+<recipe name="seedApple" count="1" craft_area="ulmStationArtisan_1" tags="learnable" craft_time="1">
+	<ingredient name="foodCropApple" count="5"/>
+</recipe>
+
+<recipe name="seedWheat" count="1" craft_area="ulmStationArtisan_1" tags="learnable" craft_time="1">
+	<ingredient name="foodCropWheat" count="5"/>
+</recipe>
+
+<recipe name="seedTomato" count="1" craft_area="ulmStationArtisan_1" tags="learnable" craft_time="1">
+	<ingredient name="foodCropTomato" count="5"/>
+</recipe>
+
+<recipe name="seedOnion" count="1" craft_area="ulmStationArtisan_1" tags="learnable" craft_time="1">
+	<ingredient name="foodCropOnion" count="5"/>
+</recipe>
+
+<recipe name="seedCabbage" count="1" craft_area="ulmStationArtisan_1" tags="learnable" craft_time="1">
+	<ingredient name="foodCropCabbage" count="5"/>
+</recipe>
+
+<recipe name="Chilli Pepper Sprout" craft_area="ulmStationArtisan_1" count="1" craft_exp_gain="0">
+	<ingredient name="Chilli Pepper" count="5"/>
+</recipe>
+
+<recipe name="Garlic Bulb Sprout" craft_area="ulmStationArtisan_1" count="1" craft_exp_gain="0">
+	<ingredient name="Garlic Bulb" count="5"/>
+</recipe>
+
+<recipe name="Carrot Root Sprout" craft_area="ulmStationArtisan_1" count="1" craft_exp_gain="0">
+	<ingredient name="Carrot Root" count="5"/>
+</recipe>
+
+<recipe name="Beet Root Sprout" craft_area="ulmStationArtisan_1" count="1" craft_exp_gain="0">
+	<ingredient name="Beet Root" count="5"/>
+</recipe>
+
+<recipe name="Spring Onion Bulb Sprout" craft_area="ulmStationArtisan_1" count="1" craft_exp_gain="0">
+	<ingredient name="Spring Onion Bulb" count="5"/>
+</recipe>
+
+
+<!--Drink-->
+<recipe name="drinkAppleJuice" count="1" craft_area="Barrel" craft_time="10">
+	<ingredient name="foodCropApple" count="3"/>
+	<ingredient name="drinkJarEmpty" count="1"/>
+</recipe>
+
+<recipe name="drinkAppleCider" count="1" craft_area="Barrel" tags="learnable">
+	<ingredient name="drinkAppleJuice" count="1"/>
+	<ingredient name="drinkJarGrainAlcohol" count="1"/>
+</recipe>
+
+<recipe name="drinkTequila" count="1" craft_area="Barrel" tags="perkMasterChef,learnable">
+	<ingredient name="foodCropYuccaFruit" count="5"/>
+	<ingredient name="drinkJarGrainAlcohol" count="1"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="35"/>
+</recipe>
+
+<recipe name="drinkMilkshake" count="1" craft_area="Barrel" tags="learnable">
+	<ingredient name="drinkJarMilk" count="2"/>
+	<ingredient name="drugRockBusters" count="1"/>
+	<ingredient name="resourceSnowBall" count="25"/>
+</recipe>
+
+<recipe name="drinkBlueberryWine" count="1" craft_area="Barrel" tags="learnable">
+	<ingredient name="drinkJarGrainAlcohol" count="3"/>
+	<ingredient name="foodCropBlueberries" count="10"/>
+</recipe>
+
+<recipe name="drinkWhisky" count="1" craft_area="Barrel" tags="learnable">
+	<ingredient name="drinkJarGrainAlcohol" count="1"/>
+	<ingredient name="resourceWood" count="50"/>
+	<ingredient name="resourceCoal" count="10"/>
+</recipe>
+
+<recipe name="drinkVodka" count="1" craft_area="Barrel" tags="learnable">
+	<ingredient name="drinkJarGrainAlcohol" count="3"/>
+	<ingredient name="foodCropPotato" count="5"/>
+</recipe>
+
+<!-- Sauces -->
+
+<recipe name="foodCanSalsa" count="3" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="drinkJarBoiledWater" count="1"/>	
+	<ingredient name="foodCropTomato" count="3"/>		
+	<ingredient name="foodCropOnion" count="1"/>		
+	<ingredient name="Chilli Pepper" count="1"/>
+	<ingredient name="Salt" count="10"/>	
+</recipe>
+<recipe name="Buffalo Sauce" count="2" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="Chilli Pepper" count="3"/>	
+	<ingredient name="foodCanSalsa" count="1"/>	
+	<ingredient name="Salt" count="10"/>			
+</recipe>
+<recipe name="BBQ Sauce" count="2" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="ulmResourceCharcoal" count="3"/>	
+	<ingredient name="Salt" count="10"/>	
+	<ingredient name="foodCanSalsa" count="1"/>	
+</recipe>
+
+<!-- Ingredients -->
+<recipe name="foodFlour" count="1" craft_area="ulmStationMortarAndPestle_1">
+	<ingredient name="foodCropWheat" count="1"/>
+</recipe>
+
+<recipe name="Salt" count="30" craft_area="campfire" craft_tool="toolCookingPot">  
+	<ingredient name="drinkJarRiverWater" count="5"/>
+    <ingredient name="resourcePotassiumNitratePowder" count="100"/>	
+</recipe>
+
+<recipe name="foodButter" count="1" craft_area="ulmStationMortarAndPestle_1">
+	<ingredient name="drinkJarMilk" count="1"/>
+	<ingredient name="resourceCloth" count="5"/>
+</recipe>
+
+<recipe name="Cooking Oil" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+    <ingredient name="resourceAnimalFat" count="35"/>
+	<ingredient name="ulmDrinkPlasticBottleEmpty"/>
+</recipe>
+	
+<recipe name="foodGravy" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="foodFlour" count="1"/>
+	<ingredient name="Raw Chicken Wings" count="5"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-1" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodRichBroth" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="Raw Leg Quarters" count="4"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>	
+	<ingredient name="resourceBone" count="7"/>
+	<ingredient name="Beet Root" count="3"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-1" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodCheese" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="drinkJarMilk" count="1"/>
+	<ingredient name="resourceCloth" count="5"/>	
+	<ingredient name="resourceAnimalFat" count="1"/>
+</recipe>
+
+<recipe name="ToolKitchenKnife" count="1" craft_area="ulmStationForge_1" craft_time="40">
+	<ingredient name="resourceForgedIron" count="8"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceLeather" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+<!-- Tier 1 -->
+<recipe name="foodPorridge" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+	<ingredient name="foodCropWheat" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="Egg Salad" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Snake Egg" count="3"/>
+	<ingredient name="Raw Chicken Egg" count="1"/>
+	<ingredient name="Cooking Oil" count="10"/>
+</recipe>
+
+<recipe name="foodRice" count="3" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+	<ingredient name="foodBagRice" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="3"/>
+</recipe>
+
+<recipe name="foodPemmican" count="1" tags="perkMasterChef,learnable" craft_time="15">
+	<ingredient name="Raw Small Meat" count="5"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+	<ingredient name="resourceYuccaFibers" count="20"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-1" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="Charred Meat Small" count="1" craft_area="campfire">
+	<ingredient name="Raw Small Meat" count="1"/>
+</recipe>
+
+<recipe name="Charred Venison" count="1" craft_area="campfire">
+	<ingredient name="Raw Venison" count="1"/>
+</recipe>
+
+<recipe name="Charred Rabbit" count="1" craft_area="campfire">
+	<ingredient name="Raw Whole Rabbit" count="1"/>
+</recipe>
+
+<recipe name="Charred Ribs" count="1" craft_area="campfire">
+	<ingredient name="Raw Rib Halves" count="1"/>
+</recipe>
+
+<recipe name="Charred Snake" count="1" craft_area="campfire">
+	<ingredient name="Raw Whole Snake" count="1"/>
+</recipe>
+
+<recipe name="Grilled Snake" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Whole Snake" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="BBQ Sauce" count="2"/>
+</recipe>
+
+<recipe name="Bacon" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="Raw Bacon" count="1"/>
+	<ingredient name="Cooking Oil" count="2"/>
+</recipe>
+
+<recipe name="Grilled Venison" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Venison" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="BBQ Sauce" count="2"/>
+</recipe>
+
+<recipe name="Grilled Ribs" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Rib Halves" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="BBQ Sauce" count="2"/>
+</recipe>
+
+<recipe name="resourceLeather" count="3" craft_area="ulmStationTailor_1" craft_time="10">
+	<ingredient name="drinkJarRiverWater" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="Animal Skin" count="1"/>
+</recipe>
+
+<recipe name="Raw Animal Fat" count="30" craft_area="campfire" craft_tool="toolCookingPot" craft_time="80">
+	<ingredient name="Raw Pork Belly" count="1"/>
+</recipe>
+
+<recipe name="resourceAnimalFat" count="10" craft_area="campfire" craft_tool="toolCookingPot" craft_time="3">
+	<ingredient name="Raw Animal Fat" count="2"/>
+</recipe>
+
+<recipe name="Grilled Chicken Breast" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Chicken Breast" count="1"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="BBQ Sauce" count="2"/>
+	<ingredient name="Salt" count="10"/>
+</recipe>
+
+<recipe name="Grilled Chicken Thigh" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Chicken Legs" count="1"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="BBQ Sauce" count="2"/>
+	<ingredient name="Salt" count="10"/>
+</recipe>
+
+<recipe name="Grilled Chicken Wings" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Chicken Wings" count="1"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="BBQ Sauce" count="2"/>
+	<ingredient name="Salt" count="10"/>
+</recipe>
+
+<recipe name="Grilled Rabbit" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Whole Rabbit" count="1"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="BBQ Sauce" count="2"/>
+	<ingredient name="Salt" count="10"/>
+</recipe>
+
+<recipe name="Grilled Rabbit Leg" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Rabbit Legs" count="1"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="BBQ Sauce" count="2"/>
+	<ingredient name="Salt" count="10"/>
+</recipe>
+
+<recipe name="Grilled Steak" count="1" craft_area="campfire" craft_tool="toolCookingGrill" craft_time="30">
+	<ingredient name="Raw Steak" count="1"/>
+	<ingredient name="Spring Onion Bulb" count="15"/>	
+	<ingredient name="Cooking Oil" count="2"/>
+    <ingredient name="Buffalo Sauce" count="2"/>
+    <ingredient name="Salt" count="10"/>	
+</recipe>
+
+<recipe name="Grilled Pork Shank" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="Raw Pork Shank" count="1"/>
+    <ingredient name="Cooking Oil" count="2"/>
+    <ingredient name="Buffalo Sauce" count="2"/>
+	<ingredient name="Salt" count="10"/>
+</recipe>
+
+<recipe name="Mutton" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="Raw Leg Quarters" count="1"/>
+	<ingredient name="Cooking Oil" count="2"/>
+	<ingredient name="Salt" count="10"/>	
+</recipe>
+
+<recipe name="Packaged Pepperoni" count="1" craft_area="oven" craft_tool="toolCookingGrill">
+	<ingredient name="Garlic Bulb" count="5"/>	
+	<ingredient name="Salt" count="15"/>		
+	<ingredient name="ulmResourceCharcoal" count="5"/>		
+	<ingredient name="Raw Pork Belly" count="1"/>
+    <ingredient name="Raw Ground Meat" count="15"/>	
+</recipe>
+
+<recipe name="Raw Steak" count="3" craft_area="CookingTable" craft_tool="ToolKitchenKnife">
+	<ingredient name="Raw Large Meat" count="1"/>		
+</recipe>
+
+<recipe name="Raw Small Meat" count="2" craft_area="CookingTable" craft_tool="ToolKitchenKnife">
+	<ingredient name="Raw Large Meat" count="1"/>		
+</recipe>
+
+<recipe name="Raw Pork Shank" count="4" craft_area="CookingTable" craft_tool="ToolKitchenKnife">
+	<ingredient name="Raw Large Meat" count="1"/>		
+</recipe>
+
+<recipe name="Raw Bacon" count="15" craft_area="CookingTable" craft_tool="ToolKitchenKnife">
+    <ingredient name="Raw Pork Belly" count="2"/>
+</recipe>
+
+<recipe name="Raw Ground Meat" count="10" craft_area="CookingTable" craft_tool="ToolCookingGrinder">
+    <ingredient name="Raw Small Meat" count="2"/>
+</recipe>
+
+<recipe name="Pepperoni" count="10" craft_area="CookingTable" craft_tool="ToolKitchenKnife">
+    <ingredient name="Packaged Pepperoni" count="1"/>
+</recipe>	
+
+
+<!-- Tier 2 -->
+<recipe name="foodMashedPotato" count="1" craft_area="oven" craft_tool="toolCookSet" tags="perkMasterChef,learnable">
+	<ingredient name="foodCropPotato" count="2"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<ingredient name="foodButter" count="1"/>
+</recipe>
+
+<recipe name="foodAppleJam" count="1" craft_area="oven" tags="learnable">
+	<ingredient name="foodCropApple" count="5"/>
+	<ingredient name="drinkJarEmpty" count="1"/>
+</recipe>
+
+<recipe name="foodBlueberryJam" count="1" craft_area="oven" tags="learnable">
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="drinkJarEmpty" count="1"/>
+</recipe>
+
+<recipe name="foodBread" count="1" craft_area="oven" craft_tool="toolCookSet" tags="perkMasterChef,learnable">
+	<ingredient name="foodFlour" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<ingredient name="Cooking Oil" count="2"/>
+</recipe>
+
+<recipe name="foodBiscuit" count="1" craft_area="oven" craft_tool="toolCookSet" tags="perkMasterChef,learnable">
+	<ingredient name="foodFlour" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<ingredient name="foodButter" count="1"/>
+</recipe>
+
+<recipe name="foodHoneyham" count="5" craft_area="oven" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable">
+	<ingredient name="Raw Venison" count="5"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="resourceCoal" count="15"/>
+	<ingredient name="foodHoney" count="1"/>
+	<ingredient name="Garlic Bulb" count="5"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-10" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodArrozConPollo" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<ingredient name="Raw Chicken Legs" count="7"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="foodRice" count="1"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodFrenchToast" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodEgg" count="1"/>
+	<ingredient name="foodBread" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="foodCropBlueberries" count="2"/>
+</recipe>
+
+<recipe name="foodOmelette" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="Raw Venison" count="5"/>
+	<ingredient name="foodEgg" count="2"/>
+	<ingredient name="foodCropMushrooms" count="2"/>
+	<ingredient name="Salt" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-1" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodEggSandwich" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="Raw Chicken Breast" count="8"/>
+	<ingredient name="foodEgg" count="1"/>
+	<ingredient name="foodBiscuit" count="1"/>
+	<ingredient name="foodCheese" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodColeslaw" count="1" tags="perkMasterChef,learnable" craft_time="10">
+	<ingredient name="foodCropCabbage" count="1"/>
+	<ingredient name="foodCropOnion" count="1"/>
+	<ingredient name="Carrot Root" count="1"/>
+	<ingredient name="Beet Root" count="1"/>
+</recipe>
+
+<!-- Tier 3 -->
+<recipe name="foodFruitPlatter" count="1" craft_area="oven" tags="perkMasterChef,learnable">
+	<ingredient name="foodCanPears" count="1"/>
+	<ingredient name="foodCropBlueberries" count="2"/>
+	<ingredient name="foodCropApple" count="1"/>
+	<ingredient name="foodCropYuccaFruit" count="1"/>
+</recipe>
+
+<recipe name="foodApplepie" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodCropApple" count="2"/>
+	<ingredient name="foodButter" count="1"/>
+	<ingredient name="foodEgg" count="1"/>
+	<ingredient name="foodFlour" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="foodHamburger" count="1" craft_area="campfire" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="Raw Steak" count="8"/>
+	<ingredient name="foodBread" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="foodCropTomato" count="1"/>
+	<ingredient name="foodCropPotato" count="1"/>
+	<ingredient name="foodCropOnion" count="1"/>
+	<ingredient name="Chilli Pepper" count="2"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodPizza" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodFlour" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<ingredient name="foodCheese" count="1"/>
+	<ingredient name="foodCanTomato" count="1"/>
+	<ingredient name="foodHoneyham" count="5"/>
+	<ingredient name="Pepperoni" count="15"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-1" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodFriedRice" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodEgg" count="1"/>
+	<ingredient name="foodRice" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="foodCanSham" count="1"/>
+	<ingredient name="foodCanPeas" count="1"/>
+</recipe>
+
+<recipe name="foodBurrito" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodFlour" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="foodCropOnion" count="1"/>
+	<ingredient name="foodCheese" count="1"/>
+	<ingredient name="foodCanSalsa" count="1"/>
+	<ingredient name="Raw Whole Rabbit" count="8"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodBiscuitsandgravy" count="1" craft_area="oven" tags="learnable">
+	<ingredient name="foodBiscuit" count="1"/>
+	<ingredient name="Raw Chicken Wings" count="7"/>
+	<ingredient name="foodGravy" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodKimchi" count="1" tags="learnable" >
+	<ingredient name="foodCropCabbage" count="1"/>
+	<ingredient name="foodCropOnion" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="15"/>
+</recipe>
+
+<recipe name="foodBLT" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<ingredient name="Raw Pork Shank" count="8"/>
+	<ingredient name="foodCropCabbage" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="foodCropTomato" count="1"/>
+	<ingredient name="foodBread" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodCapreseSalad" craft_area="campfire" count="1" tags="learnable">
+	<ingredient name="foodCheese" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="foodCropCabbage" count="2"/>
+	<ingredient name="foodCropTomato" count="1"/>
+</recipe>
+
+<recipe name="foodGrilledSalad" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<ingredient name="Raw Small Meat" count="8"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="foodCropCabbage" count="2"/>
+	<ingredient name="foodCropTomato" count="1"/>
+	<ingredient name="foodCropOnion" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="Venison Soup" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="BBQ Sauce" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="Carrot Root" count="3"/>	
+	<ingredient name="Garlic Bulb" count="2"/>
+	<ingredient name="foodCropOnion" count="2"/>	
+	<ingredient name="Raw Venison" count="1"/>	
+</recipe>
+
+<recipe name="Spicy Curry" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="Buffalo Sauce" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="Chilli Pepper" count="5"/>	
+	<ingredient name="Raw Chicken Breast" count="2"/>
+	<ingredient name="Raw Chicken Legs" count="2"/>	
+	<ingredient name="Raw Chicken Wings" count="2"/>	
+</recipe>
+
+<recipe name="Greens Soup" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+    <ingredient name="Raw Whole Snake" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<ingredient name="drinkJarMilk" count="1"/>
+	<ingredient name="Carrot Root" count="3"/>	
+	<ingredient name="foodCropCabbage" count="2"/>	
+	<ingredient name="Cooking Oil" count="1"/>	
+</recipe>
+
+
+<!-- Tier 3 -->
+<recipe name="foodTonjiru" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodCanMiso" count="1"/>
+	<ingredient name="Raw Leg Quarters" count="10"/>
+	<ingredient name="foodCropMushrooms" count="2"/>	
+	<ingredient name="foodCropOnion" count="1"/>
+	<ingredient name="foodCanStock" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodReserveChicken" count="1" craft_area="campfire" tags="learnable">
+	<ingredient name="foodCanSoup" count="1"/>
+	<ingredient name="Raw Chicken Breast" count="10"/>
+	<ingredient name="foodCropPotato" count="1"/>	
+	<ingredient name="resourceAnimalFat" count="3"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<recipe name="foodHuevos" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodEgg" count="2"/>
+	<ingredient name="foodCheese" count="1"/>
+	<ingredient name="foodCanSalsa" count="1"/>	
+	<ingredient name="foodCornMeal" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<ingredient name="Salt" count="10"/>
+</recipe>
+
+<recipe name="foodJambalaya" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodRice" count="1"/>
+	<ingredient name="foodCanTomato" count="1"/>
+	<ingredient name="Raw Rib Halves" count="10"/>	
+	<ingredient name="foodRichBroth" count="1"/>
+	<ingredient name="foodCropOnion" count="1"/>
+	<ingredient name="Salt" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+
+
+<!-- Tier 4 -->
+<recipe name="foodBOC" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodHoneyham" count="1"/>
+	<ingredient name="foodBiscuit" count="1"/>
+	<ingredient name="foodEgg" count="3"/>	
+	<ingredient name="foodCropApple" count="1"/>
+	<ingredient name="foodGravy" count="1"/>
+</recipe>
+
+<recipe name="foodKFC" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodCanChicken" count="1"/>
+	<ingredient name="foodBiscuit" count="1"/>
+	<ingredient name="foodMashedPotato" count="1"/>	
+	<ingredient name="foodCropCorn" count="1"/>
+	<ingredient name="foodFlour" count="1"/>
+</recipe>
+
+<recipe name="foodFullEnglish" count="1" craft_area="oven" craft_tool="toolCookSet" tags="learnable">
+	<ingredient name="foodCanChili" count="1"/>
+	<ingredient name="foodCropTomato" count="1"/>
+	<ingredient name="foodCropMushrooms" count="3"/>	
+	<ingredient name="foodEgg" count="2"/>
+	<ingredient name="Raw Rabbit Legs" count="20"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-5" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<!--old food-->
+<recipe name="foodBaconAndEggs" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="Raw Bacon" count="10"/>
+	<ingredient name="foodEgg" count="2"/>
+    <ingredient name="Cooking Oil" count="15"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-2" tags="foodRawMeat"/>
+	</effect_group>
+</recipe>
+
+<!--Schematic Recipes-->
+<!--ulmStationResearch_2-->
+<recipe name="drinkJarCoffeeSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="resourceCropCoffeeBeans" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="drinkJarGoldenRodTeaSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="resourceCropGoldenrodPlant" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="drinkJarRedTeaSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="resourceCropChrysanthemumPlant" count="2"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+
+<recipe name="foodPorridgeSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropWheat" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="foodRiceSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodBagRice" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="foodBakedPotatoSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropPotato" count="2"/>
+</recipe>
+
+<recipe name="foodGrilledMeatSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+</recipe>
+
+<recipe name="foodBoiledMeatSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+</recipe>
+
+<recipe name="foodCornOnTheCobSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropCorn" count="2"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="foodPemmicanSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="resourceYuccaFibers" count="20"/>
+	<ingredient name="foodRawMeat" count="5"/>
+</recipe>
+
+<recipe name="foodMeatStewSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+	<ingredient name="foodCropPotato" count="1"/>
+	<ingredient name="foodCropOnion" count="1"/>
+</recipe>
+
+<recipe name="foodSteakAndPotatoSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropPotato" count="2"/>
+	<ingredient name="foodRawMeat" count="10"/>
+</recipe>
+
+<recipe name="foodVegetableStewSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropCabbage" count="2"/>
+	<ingredient name="foodCropMushrooms" count="2"/>
+</recipe>
+
+<recipe name="foodBaconAndEggsSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+	<ingredient name="foodEgg" count="1"/>
+</recipe>
+
+<recipe name="foodHamburgerSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+	<ingredient name="foodBread" count="1"/>
+</recipe>
+
+<recipe name="foodarrozSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+	<ingredient name="foodRice" count="1"/>
+</recipe>
+
+<recipe name="drinkJarBeerSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="resourceCropHopsFlower" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="drinkYuccaJuiceSmoothieSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="resourceSnowBall" count="10"/>
+	<ingredient name="foodCropYuccaFruit" count="2"/>
+</recipe>
+
+<recipe name="drinkMilkshakeSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="drinkJarMilk" count="1"/>
+	<ingredient name="drugRockBusters" count="1"/>
+</recipe>
+
+<recipe name="drinkTequilaSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropYuccaFruit" count="5"/>
+	<ingredient name="drinkJarGrainAlcohol" count="1"/>
+</recipe>
+
+<recipe name="drinkBlueberryWineSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="drinkJarGrainAlcohol" count="1"/>
+</recipe>
+
+<recipe name="drinkAppleSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropApple" count="2"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="drinkWhiskySchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="drinkJarGrainAlcohol" count="3"/>
+	<ingredient name="resourceWood" count="50"/>
+	<ingredient name="resourceCoal" count="10"/>
+</recipe>
+
+<recipe name="drinkVodkaSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="drinkJarGrainAlcohol" count="5"/>
+	<ingredient name="foodCropPotato" count="7"/>
+</recipe>
+
+<recipe name="drinkJarGrandpasAwesomeSauceSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="casinoCoin" count="50"/>
+	<ingredient name="foodHoney" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="drinkJarGrandpasLearningElixirSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanDogfood" count="1"/>
+	<ingredient name="resourceAcid" count="1"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+</recipe>
+
+<recipe name="drinkJarGrandpasMoonshineSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCornMeal" count="5"/>
+	<ingredient name="drinkJarGrainAlcohol" count="1"/>
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="resourceAcid" count="1"/>
+</recipe>
+
+<recipe name="foodCornBreadSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCornMeal" count="2"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="foodPumpkinBreadSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropPumpkin" count="1"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="foodMashedPotatoSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropPotato" count="3"/>
+</recipe>
+
+<recipe name="foodJamSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropBlueberries" count="2"/>
+	<ingredient name="foodCropApple" count="2"/>
+</recipe>
+
+<recipe name="foodBreadsSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodFlour" count="2"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="foodHoneyhamSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+	<ingredient name="foodHoney" count="1"/>
+</recipe>
+
+<recipe name="foodBiscuitsandgravySchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodGravy" count="1"/>
+	<ingredient name="foodBiscuit" count="1"/>
+</recipe>
+
+<recipe name="eggrecipeSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodEgg" count="9"/>
+</recipe>
+
+<recipe name="foodBlueberryPieSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="foodFlour" count="2"/>
+</recipe>
+
+<recipe name="foodPumpkinPieSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropPumpkin" count="2"/>
+	<ingredient name="foodFlour" count="2"/>
+</recipe>
+
+<recipe name="foodApplepieSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropPumpkin" count="2"/>
+	<ingredient name="foodFlour" count="2"/>
+</recipe>
+
+<recipe name="foodChiliDogSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanChili" count="1"/>
+	<ingredient name="foodRawMeat" count="10"/>
+	<ingredient name="foodBread" count="1"/>
+</recipe>
+
+<recipe name="foodFishTacosSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanSalmon" count="1"/>
+	<ingredient name="foodCornMeal" count="1"/>
+</recipe>
+
+<recipe name="foodHoboStewSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRottingFlesh" count="10"/>
+	<ingredient name="foodCropPotato" count="2"/>
+	<ingredient name="foodCropCorn" count="2"/>
+</recipe>
+
+<recipe name="foodFruitPlatterSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanPears" count="1"/>
+	<ingredient name="foodCropBlueberries" count="3"/>
+	<ingredient name="foodCropApple" count="1"/>
+</recipe>
+
+<recipe name="foodPizzaSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanTomato" count="1"/>
+	<ingredient name="foodFlour" count="3"/>
+</recipe>
+
+<recipe name="foodFriedRiceSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRice" count="1"/>
+	<ingredient name="foodCanPeas" count="1"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+</recipe>
+
+<recipe name="foodBurritoSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="15"/>
+	<ingredient name="foodCheese" count="1"/>
+	<ingredient name="foodFlour" count="3"/>
+</recipe>
+
+<recipe name="foodPumpkinCheesecakeSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodFlour" count="3"/>
+	<ingredient name="foodCropPumpkin" count="3"/>
+</recipe>
+
+<recipe name="foodShamChowderSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanSham" count="2"/>
+	<ingredient name="foodFlour" count="3"/>
+</recipe>
+
+<recipe name="foodTonjiruSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanMiso" count="1"/>
+	<ingredient name="foodRawMeat" count="10"/>
+</recipe>
+
+<recipe name="foodReserveChickenSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanSoup" count="2"/>
+	<ingredient name="foodRawMeat" count="10"/>
+</recipe>
+
+<recipe name="foodHuevosSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodEgg" count="3"/>
+	<ingredient name="foodCanSalsa" count="1"/>
+</recipe>
+
+<recipe name="foodJambalayaSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="15"/>
+	<ingredient name="foodCanTomato" count="1"/>
+</recipe>
+
+<recipe name="foodTunaFishGravyToastSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanTuna" count="1"/>
+	<ingredient name="foodBiscuit" count="2"/>
+</recipe>
+
+<recipe name="foodSpaghettiSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanPasta" count="2"/>
+</recipe>
+
+<recipe name="foodShepardsPieSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanLamb" count="1"/>
+	<ingredient name="foodCanPeas" count="1"/>
+</recipe>
+
+<recipe name="foodGumboStewSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanBeef" count="2"/>
+	<ingredient name="foodRawMeat" count="10"/>
+</recipe>
+
+<recipe name="foodKFCSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCanChicken" count="2"/>
+	<ingredient name="foodBiscuit" count="1"/>
+</recipe>
+
+<recipe name="foodBOCSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodEgg" count="5"/>
+	<ingredient name="foodHoneyham" count="1"/>
+</recipe>
+
+<recipe name="foodFullEnglishSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+	<ingredient name="foodCropTomato" count="1"/>
+</recipe>
+
+<recipe name="foodColeslawSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropCabbage" count="2"/>
+	<ingredient name="foodCropOnion" count="2"/>
+</recipe>
+
+<recipe name="foodsaladSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropCabbage" count="4"/>
+	<ingredient name="foodCropOnion" count="2"/>
+</recipe>
+
+<recipe name="foodbltSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodRawMeat" count="10"/>
+	<ingredient name="foodCropTomato" count="2"/>
+	<ingredient name="foodCropCabbage" count="2"/>
+</recipe>
+
+<recipe name="foodKimchiSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="10">
+	<ingredient name="ulmResourceResearch" count="150"/>
+	<ingredient name="foodCropCabbage" count="7"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="42"/>
+</recipe>
+
+<recipe name="OvenSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="30">
+	<ingredient name="ulmResourceResearch" count="250"/>
+	<ingredient name="resourceForgedIron" count="35"/>
+	<ingredient name="resourceMetalPipe" count="15"/>
+	<ingredient name="resourceElectricParts" count="10"/>
+	<ingredient name="toolCookingPot" count="5"/>
+	<ingredient name="toolCookingGrill" count="3"/>
+</recipe>
+
+<recipe name="CookingTableSchematic" ccount="1" craft_area="ulmStationResearch_2" craft_time="30">
+    <ingredient name="ulmResourceResearch" count="250"/>
+    <ingredient name="resourceForgedIron" count="10"/>
+	<ingredient name="resourceSpring" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="25"/>
+	<ingredient name="ulmResourcePlank" count="40"/>
+</recipe>
+
+<recipe name="BarrelSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="30">
+    <ingredient name="ulmResourceResearch" count="250"/>
+	<ingredient name="resourceForgedIron" count="30"/>
+	<ingredient name="ulmResourcePlank" count="150"/>
+	<ingredient name="resourceGlue" count="10"/>
+</recipe>
+
+<recipe name="VenisonSoupSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="30">
+    <ingredient name="ulmResourceResearch" count="250"/>
+	<ingredient name="BBQ Sauce" count="1"/>
+	<ingredient name="Carrot Root" count="5"/>	
+	<ingredient name="Garlic Bulb" count="4"/>
+	<ingredient name="foodCropOnion" count="4"/>	
+	<ingredient name="Raw Venison" count="4"/>	
+</recipe>
+
+<recipe name="SpicyCurrySchematic" count="1" craft_area="ulmStationResearch_2" craft_time="30">
+    <ingredient name="ulmResourceResearch" count="250"/>
+	<ingredient name="Buffalo Sauce" count="1"/>
+	<ingredient name="Chilli Pepper" count="5"/>	
+	<ingredient name="Raw Chicken Breast" count="3"/>
+	<ingredient name="Raw Chicken Legs" count="3"/>	
+	<ingredient name="Raw Chicken Wings" count="3"/>	
+</recipe>
+
+<recipe name="GreensSoupSchematic" count="1" craft_area="ulmStationResearch_2" craft_time="30">
+	<ingredient name="ulmResourceResearch" count="250"/>
+	<ingredient name="Carrot Root" count="5"/>	
+	<ingredient name="foodCropCabbage" count="3"/>	
+	<ingredient name="Cooking Oil" count="5"/>	
+</recipe>
+
+
+
+
+
+
+
+
+<!--Misc-->
+<recipe name="goldBar" count="1" craft_exp_gain="0" craft_time="10">
+	<ingredient name="casinoCoin" count="20000"/>
+</recipe>
+
+<recipe name="casinoCoin" count="20000" craft_time="10">
+	<ingredient name="goldBar" count="1"/>
+</recipe>
+
+
+
+
+
+<recipe name="drinkJarGrainAlcohol" craft_area="ulmStationChemistry_1" count="10" craft_time="30">
+	<ingredient name="foodCropWheat" count="10"/>
+	<ingredient name="drinkJarRiverWater" count="12"/>
+</recipe>
+
+</append>
+</configs>

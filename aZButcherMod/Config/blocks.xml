@@ -1,0 +1,923 @@
+<configs>
+<insertAfter xpath="/blocks/block[@name='utilityElectricalBox_02']" >
+	<block name="seedApple">
+		<property name="Extends" value="treeMasterGrowing" param1="CustomIcon,Harvest"/>
+		<property name="CustomIcon" value="appleseedicon"/>
+		<property name="DescriptionKey" value="treePlantedSeed1mDesc"/>
+		<property name="UnlockedBy" value="perkLivingOffTheLand,seedAppleSchematic"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="MaxDamage" value="10"/>
+		<property name="Model" value="#Entities/Trees?OakSeed01Prefab.prefab"/>
+		<property name="ModelOffset" value="0,-0.2,0"/>
+		<property name="Collide" value="melee"/>
+		<property name="FallOver" value="false"/>
+		<property name="BigDecorationRadius" value="4"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="PlantGrowing.Next" value="appleYoung"/>
+		<property name="PlantGrowing.GrowthRate" value="63"/>
+		<drop event="Destroy" name="seedapple" count="1"/>
+		<property name="PlantGrowing.IsRandom" value="false"/>
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+		<property name="EconomicValue" value="12"/>
+		<property name="EconomicBundleSize" value="5"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Resources"/>
+		<property name="ParticleOnDeath" value="treeGib_sapling"/>
+		<property name="SortOrder2" value="0142"/> <!-- SortTree -->
+		<property name="ActivationDistance" value="4"/>
+	</block>
+	
+	<block name="appleYoung">
+		<property name="PlantGrowing.Next" value="appleGrown"/>
+		<property name="Extends" value="treeMasterGrowing"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="treeOakSml01"/>
+		<property name="Model" value="#Entities/Trees?White_Oak22Prefab.prefab"/>
+		<property name="ModelOffset" value="0,-0.3,0"/>
+		<property name="MultiBlockDim" value="1,4,1"/>
+		<property name="BigDecorationRadius" value="4"/>
+		<drop event="Destroy" name="seedApple" count="1"/>
+		<property name="SortOrder2" value="0144"/> <!-- SortTree -->
+	</block>
+	
+<!--<block name="appleYoungTest">
+	    <property name="UpgradeRated.ToBlock" value="appleGrown" />
+    	<property name="UpgradeRated.Rate" value="1" />	
+		<property name="Class" value="UpgradeRated" />		
+    	
+		
+		<property name="Extends" value="treeMasterGrowing"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="treeOakSml01"/>
+		<property name="Model" value="#Entities/Trees?White_Oak22Prefab.prefab"/>
+		<property name="ModelOffset" value="0,-0.3,0"/>
+		<property name="MultiBlockDim" value="1,7,1"/>
+		<property name="BigDecorationRadius" value="4"/>
+		<property name="SortOrder2" value="0144"/> 
+	</block> -->
+	
+	<block name="appleGrown">
+		<property name="Class" value="Loot" />
+		<property name="DescriptionKey" value="appleGrownDesc"/>
+		<property name="LootList" value="appletree" />
+				<drop event="Destroy" count="0"/>
+  		<drop event="Harvest" count="0"/>
+		<property name="DowngradeBlock" value="appleYoung"/> 
+		
+		<property name="Extends" value="woodMaster"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="Material" value="MtreeWoodFull"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/Trees?Hollywood_Juniper15mPrefab.prefab"/>
+		<property name="ModelOffset" value="0,-0.5,0"/>
+		<property name="MultiBlockDim" value="1,27,1"/>
+		<property name="BigDecorationRadius" value="3"/>
+		<property name="SortOrder2" value="0400"/> <!-- SortTree -->
+		<property name="MaxDamage" value="100" />
+	</block>
+	
+	<block name="appleTreeEmpty">
+		<property name="Extends" value="treeMasterGrowing"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="treeOakSml01"/>
+		<property name="Model" value="#Entities/Trees?White_Oak22Prefab.prefab"/>
+		<property name="ModelOffset" value="0,-0.3,0"/>
+		<property name="MultiBlockDim" value="1,7,1"/>
+		<property name="BigDecorationRadius" value="4"/>
+		<property name="PlantGrowing.Next" value="appleGrown"/>
+		<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+		<drop event="Destroy" name="seedApple" count="1"/>
+		<property name="SortOrder2" value="0144"/> <!-- SortTree -->
+	</block>
+
+<!--Wheat-->
+<!--394 texture: intermediate coffee-->
+	<block name="seedWheat">
+		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="wheatseedicon"/>
+		<property name="UnlockedBy" value="perkLivingOffTheLand,seedWheatSchematic"/>
+		<property name="Texture" value="393"/>
+		<property name="PlantGrowing.Next" value="Wheatgrowing"/>
+		<property name="PlaceAsRandomRotation" value="true"/>
+		<property name="CraftingIngredientTime" value="5"/>
+		<property name="Group" value="Food/Cooking"/>
+		<drop event="Destroy" name="seedWheat" count="1"/>
+	</block>
+	
+	<block name="Wheatgrowing">
+		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Texture" value="393"/>
+		<property name="PlantGrowing.Next" value="WheatPlantPlayer"/>
+		<drop event="Destroy" name="seedWheat" count="1"/>
+	</block>
+  
+	<block name="WheatPlant">
+		<property name="Extends" value="cropsHarvestableMaster"/>
+		<property name="Texture" value="201"/>
+		<drop event="Harvest" name="foodCropWheat" count="1" tag="wildCropHarvest"/>	
+		<drop event="Harvest" name="foodCropWheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	</block> 
+	
+	<block name="WheatPlantPlayer">
+		<property name="Extends" value="WheatPlant"/>
+		<property name="DescriptionKey" value="plantedWheat3HarvestDesc"/>
+		<drop event="Harvest" name="foodCropWheat" count="2" tag="CropHarvest"/>	
+		<drop event="Harvest" name="foodCropWheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Destroy" name="seedWheat" count="1" prob="0.5"/>
+		<property name="Texture" value="201" />
+	</block> 
+
+<!--Tomato-->
+	<block name="seedTomato">
+		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="tomatoseedicon"/>
+		<property name="UnlockedBy" value="perkLivingOffTheLand,seedTomatoSchematic"/>
+		<property name="Texture" value="393"/>
+		<property name="PlantGrowing.Next" value="Tomatogrowing"/>
+		<property name="PlaceAsRandomRotation" value="true"/>
+		<property name="CraftingIngredientTime" value="5"/>
+		<property name="Group" value="Food/Cooking"/>
+		<drop event="Destroy" name="seedTomato" count="1"/>
+	</block>
+	
+	<block name="Tomatogrowing">
+		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Texture" value="393"/>
+		<property name="PlantGrowing.Next" value="TomatoPlantPlayer"/>
+		<drop event="Destroy" name="seedTomato" count="1"/>
+	</block>
+  
+	<block name="TomatoPlant">
+		<property name="Extends" value="cropsHarvestableMaster"/>
+		<property name="Texture" value="364"/>
+		<drop event="Harvest" name="foodCropTomato" count="1" tag="wildCropHarvest"/>	
+		<drop event="Harvest" name="foodCropTomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	</block> 
+	
+	<block name="TomatoPlantPlayer">
+		<property name="Extends" value="TomatoPlant"/>
+		<property name="DescriptionKey" value="plantedTomato3HarvestDesc"/>
+		<drop event="Harvest" name="foodCropTomato" count="2" tag="CropHarvest"/>	
+		<drop event="Harvest" name="foodCropTomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Destroy" name="seedTomato" count="1" prob="0.5"/>
+		<property name="Texture" value="364" />
+	</block> 
+
+<!--Onion-->
+	<block name="seedOnion">
+		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="onionseedicon"/>
+		<property name="UnlockedBy" value="perkLivingOffTheLand,seedOnionSchematic"/>
+		<property name="Texture" value="393"/>
+		<property name="PlantGrowing.Next" value="Oniongrowing"/>
+		<property name="PlaceAsRandomRotation" value="true"/>
+		<property name="CraftingIngredientTime" value="5"/>
+		<property name="Group" value="Food/Cooking"/>
+		<drop event="Destroy" name="seedOnion" count="1"/>
+	</block>
+	
+	<block name="Oniongrowing">
+		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Texture" value="393"/>
+		<property name="PlantGrowing.Next" value="OnionPlantPlayer"/>
+		<drop event="Destroy" name="seedOnion" count="1"/>
+	</block>
+  
+	<block name="OnionPlant">
+		<property name="Extends" value="cropsHarvestableMaster"/>
+		<property name="Texture" value="40"/>
+		<drop event="Harvest" name="foodCropOnion" count="1" tag="wildCropHarvest"/>	
+		<drop event="Harvest" name="foodCropOnion" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	</block> 
+	
+	<block name="OnionPlantPlayer">
+		<property name="Extends" value="OnionPlant"/>
+		<property name="DescriptionKey" value="plantedOnion3HarvestDesc"/>
+		<drop event="Harvest" name="foodCropOnion" count="2" tag="CropHarvest"/>	
+		<drop event="Harvest" name="foodCropOnion" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Destroy" name="seedOnion" count="1" prob="0.5"/>
+		<property name="Texture" value="40" />
+	</block> 
+
+<!--Cabbage-->
+	<block name="seedCabbage">
+		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="cabbageseedicon"/>
+		<property name="UnlockedBy" value="perkLivingOffTheLand,seedCabbageSchematic"/>
+		<property name="Texture" value="393"/>
+		<property name="PlantGrowing.Next" value="Cabbagegrowing"/>
+		<property name="PlaceAsRandomRotation" value="true"/>
+		<property name="CraftingIngredientTime" value="5"/>
+		<property name="Group" value="Food/Cooking"/>
+		<drop event="Destroy" name="seedCabbage" count="1"/>
+	</block>
+	
+	<block name="Cabbagegrowing">
+		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Texture" value="393"/>
+		<property name="PlantGrowing.Next" value="CabbagePlantPlayer"/>
+		<drop event="Destroy" name="seedCabbage" count="1"/>
+	</block>
+  
+	<block name="CabbagePlant">
+		<property name="Extends" value="cropsHarvestableMaster"/>
+		<property name="Texture" value="364"/>
+		<drop event="Harvest" name="foodCropCabbage" count="1" tag="wildCropHarvest"/>	
+		<drop event="Harvest" name="foodCropCabbage" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	</block> 
+	
+	<block name="CabbagePlantPlayer">
+		<property name="Extends" value="CabbagePlant"/>
+		<property name="DescriptionKey" value="plantedCabbage3HarvestDesc"/>
+		<drop event="Harvest" name="foodCropCabbage" count="2" tag="CropHarvest"/>	
+		<drop event="Harvest" name="foodCropCabbage" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Destroy" name="seedCabbage" count="1" prob="0.5"/>
+		<property name="Texture" value="377" />
+	</block>
+	
+	<!-- Garlic Bulb Planting -->
+<block name="Garlic Bulb Sprout">
+	<property name="CustomIcon" value="FoodSeedGarlic"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="Garlic Bulb Growing"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Garlic Bulb Sprout" count="1"/>
+</block>
+
+<block name="Garlic Bulb Growing">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>	
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
+	<property name="PlantGrowing.Next" value="Garlic Bulb Harvest"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Garlic Bulb Sprout" count="1"/>
+</block>
+
+<block name="Garlic Bulb Harvest">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<!-- <property name="Class" value="CropsGrown"/>
+	<property name="CropsGrown.BonusHarvestDivisor" value="9"/> -->
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<drop event="Harvest" name="Chives" count="15,25" tag="allHarvest"/>
+	<drop event="Destroy" name="Garlic Bulb" count="1,5"/>
+	<property name="DowngradeBlock" value="Garlic Bulb Sprout"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+</block>
+
+<!-- Carrot Root Planting -->
+
+<block name="Carrot Root Sprout">
+	<property name="CustomIcon" value="FoodSeedCarrot"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="Carrot Root Growing"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Carrot Root Sprout" count="1"/>
+</block>
+
+<block name="Carrot Root Growing">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>	
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
+	<property name="PlantGrowing.Next" value="Carrot Root Harvest"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Carrot Root Sprout" count="1"/>
+</block>
+
+<block name="Carrot Root Harvest">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<!-- <property name="Class" value="CropsGrown"/>
+	<property name="CropsGrown.BonusHarvestDivisor" value="9"/> -->
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<drop event="Destroy" name="Carrot Root" count="1,5"/>
+	<property name="DowngradeBlock" value="Carrot Root Sprout"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+</block>
+
+<!-- Beet Root Planting -->
+
+<block name="Beet Root Sprout">
+	<property name="CustomIcon" value="FoodSeedBeet"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="Beet Root Growing"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Beet Root Sprout" count="1"/>
+</block>
+
+<block name="Beet Root Growing">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>	
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
+	<property name="PlantGrowing.Next" value="Beet Root Harvest"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Beet Root Sprout" count="1"/>
+</block>
+
+<block name="Beet Root Harvest">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<!-- <property name="Class" value="CropsGrown"/>
+	<property name="CropsGrown.BonusHarvestDivisor" value="9"/> -->
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<drop event="Destroy" name="Beet Root" count="1,5"/>
+	<property name="DowngradeBlock" value="Beet Root Sprout"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+</block>
+
+<!-- Spring Onion Bulb Planting -->
+
+<block name="Spring Onion Bulb Sprout">
+	<property name="CustomIcon" value="FoodSeedSpringOnion"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="Spring Onion Bulb Growing"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Spring Onion Bulb Sprout" count="1"/>
+</block>
+
+<block name="Spring Onion Bulb Growing">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>	
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
+	<property name="PlantGrowing.Next" value="Spring Onion Bulb Harvest"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Spring Onion Bulb Sprout" count="1"/>
+</block>
+
+<block name="Spring Onion Bulb Harvest">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<!-- <property name="Class" value="CropsGrown"/>
+	<property name="CropsGrown.BonusHarvestDivisor" value="9"/> -->
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<drop event="Destroy" name="Spring Onion Bulb" count="1,5"/>
+	<property name="DowngradeBlock" value="Spring Onion Bulb Sprout"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+</block>
+
+<block name="Chilli Pepper Sprout">
+	<property name="CustomIcon" value="FoodSeedChilli"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="Chilli Pepper Growing"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Chilli Pepper Sprout" count="1"/>
+</block>
+
+<block name="Chilli Pepper Growing">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<!--	
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	-->
+	<property name="Collide" value="melee"/>
+	<property name="VehicleHitScale" value=".1"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	
+	<property name="Class" value="PlantGrowing"/>	
+	<property name="PlantGrowing.GrowthRate" value="30"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="15"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+
+	<property name="HarvestOverdamage" value="false"/>
+	<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+
+	<property name="CreativeMode" value="Player"/>
+	<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
+	<property name="PlantGrowing.Next" value="Chilli Pepper Harvest"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="Chilli Pepper Sprout" count="1"/>
+</block>
+
+<block name="Chilli Pepper Harvest">
+	<property name="CustomIcon" value="plantedPumpkin1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayInfo" value="Name"/> <!-- also valid: "Name" -->
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Material" value="Mplants"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="395"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<!-- <property name="Class" value="CropsGrown"/>
+	<property name="CropsGrown.BonusHarvestDivisor" value="9"/> -->
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="HarvestOverdamage" value="false"/>
+	<drop event="Destroy" name="Chilli Pepper" count="1,5"/>
+	<property name="DowngradeBlock" value="Chilli Pepper Sprout"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	<property name="FilterTags" value="foutdoor,fcrops"/>
+	<property name="SortOrder1" value="a090"/>
+	<property name="SortOrder2" value="0002"/>
+</block>
+
+
+<block name="WorkingOven">
+	<property name="Class" value="Workstation"/>
+	<property name="CustomIcon" value="HD Working Oven"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="UnlockedBy" value="perkMasterChef,OvenSchematic"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="#@modfolder:Resources/HD Range Cooker.unity3d?HD Range Cooker.Prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+	<property name="CraftActionName" value="lblContextActionCook"/>
+	<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,fuel,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire,oven"/>
+		</property>
+	<property name="OpenSound" value="UseActions/open_mailbox"/>
+	<property name="CloseSound" value="UseActions/close_mailbox"/>
+	<property name="CraftSound" value="campfire_cook_click"/>
+	<property name="CraftCompleteSound" value="campfire_complete_item"/>
+	<property name="WorkstationJournalTip" value="campfireTip"/>
+		<property class="RepairItems">
+			<property name="resourceForgedIron" value="4"/>
+			<property name="resourceElectricParts" value="4"/>
+		</property>
+	<drop event="Destroy" name="resourceScrapIron" count="25" prob="1"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.5" stick_chance="1"/>
+	<property name="EconomicValue" value="2500"/><property name="CarryWeight" value="15.0"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="Group" value="Food/Cooking,Building,advBuilding"/>
+	<property name="DescriptionKey" value="StoveDesc"/>
+</block>
+
+<block name="wineBarrelworkbench">
+	<property name="Extends" value="woodNoUpgradeMaster"/>
+	<property name="Class" value="Workstation"/>
+	<property name="CustomIcon" value="wineBarrel"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="UnlockedBy" value="perkMasterChef,BarrelSchematic"/>
+	<property name="HeatMapStrength" value="2"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property class="Workstation">
+		<property name="Modules" value="output,input"/>
+		<property name="CraftingAreaRecipes" value="Barrel"/>
+	</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+	<property name="OpenSound" value="UseActions/open_cooler"/>
+	<property name="CloseSound" value="UseActions/close_chest"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+		<property name="ulmResourcePlank" value="15"/>
+	</property>
+	<drop event="Destroy" count="0"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="DescriptionKey" value="wineBarrelworkbenchDesc"/>
+	<property name="EconomicValue" value="2000"/><property name="CarryWeight" value="10.0"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Decor/wineBarrelPrefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Stacknumber" value="1"/>
+</block>
+
+<block name="CookingTableworkbench">
+	<property name="Extends" value="woodNoUpgradeMaster"/>
+	<property name="Class" value="Workstation"/>
+	<property name="CustomIcon" value="HN Cabinet Dark Wood"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="UnlockedBy" value="perkMasterChef,BarrelSchematic"/>
+	<property name="HeatMapStrength" value="2"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property class="Workstation">
+		<property name="Modules" value="tools,output,input"/>
+		<property name="CraftingAreaRecipes" value="CookingTable"/>
+	</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+	<property name="OpenSound" value="UseActions/open_cooler"/>
+	<property name="CloseSound" value="UseActions/close_chest"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+		<property name="ulmResourcePlank" value="15"/>
+	</property>
+	<drop event="Destroy" count="0"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="DescriptionKey" value="CookingTableworkbenchDesc"/>
+	<property name="EconomicValue" value="2000"/><property name="CarryWeight" value="12.0"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="#@modfolder:Resources/HNCabinetsKB.unity3d?CabinetA03.prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Stacknumber" value="1"/>
+</block>
+</insertAfter>
+</configs>

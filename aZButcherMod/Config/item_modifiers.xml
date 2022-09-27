@@ -1,0 +1,24 @@
+<configs>
+
+<!--Test for a meme mod: Completely useless and very expensive-->
+<!--How do you set economic value for mods????-->
+<append xpath="/item_modifiers">
+	<item_modifier name="Expensive" installable_tags="magazine" modifier_tags="magazine" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<effect_group tiered="false">
+			<passive_effect name="MagazineSize" operation="perc_add" value="5"/>
+			<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="5"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="5"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="999"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value="5"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="5"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="5"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="5"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="1"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.5"/>
+		</effect_group>
+	</item_modifier>
+</append>
+
+</configs>
